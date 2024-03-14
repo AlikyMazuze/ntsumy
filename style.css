@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(242, 209, 246);
+    color: rgb(68, 68, 68);
+    padding: 0px
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: .75rem;
+    }
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: .4rem;
+}
+
+.gif {
+    width: clamp(100px, 100%, 500px);
+    min-height: 300px;
+    object-fit: cover;
+}
+.gif-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100svh;
+    width: 100%;
+    z-index: 2;
+}
+
+.container>* {
+    width: 100%;
+}
+
+.name {
+    transition: all 100ms;
+}
+
+.container>h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#hearts {
+    position: absolute;
+    z-index: 0;
+    /* height: 100%;
+    width: 100%; */
+}
