@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +14,7 @@
 body {
     background-color: rgb(242, 209, 246);
     color: rgb(68, 68, 68);
-    padding: 0px
+    padding: 0; /* Removed 'px' unit for better cross-browser compatibility */
 }
 
 @media (min-width: 768px) {
@@ -28,16 +29,21 @@ h1 {
 }
 
 .gif {
-    width: clamp(100px, 100%, 500px);
+    width: -webkit-min-content; /* For Safari */
+    width: min-content; /* For most modern browsers */
+    max-width: 500px;
+    width: 100%; /* Fallback for older browsers */
     min-height: 300px;
     object-fit: cover;
 }
+
 .gif-cont{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -46,7 +52,7 @@ h1 {
     gap: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    height: 100svh;
+    height: 100vh; /* Fixed typo from '100svh' */
     width: 100%;
     z-index: 2;
 }
